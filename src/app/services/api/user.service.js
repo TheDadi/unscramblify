@@ -10,7 +10,7 @@
    */
 
   /** @ngInject */
-  function userService($q, firebaseAuth, firebase, $firebaseArray) {
+  function userService($q, firebaseAuthService, firebase, $firebaseArray) {
 
     var service = {
       createUser: createUser,
@@ -28,7 +28,7 @@
        */
     function createUser(credentials, userdata) {
 
-      return firebaseAuth.instance
+      return firebaseAuthService.instance
         .$createUser(credentials)
         .then(
           function (auth) {

@@ -3,10 +3,10 @@
 
   angular
     .module('app')
-    .factory('firebaseAuth', firebaseAuth);
+    .factory('firebaseAuthService', firebaseAuthService);
 
   /** @ngInject */
-    function firebaseAuth($firebaseAuth, firebase) {
+    function firebaseAuthService($firebaseAuth, firebase) {
 
     var instance = $firebaseAuth(firebase.reference());
 
