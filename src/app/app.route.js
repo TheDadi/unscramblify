@@ -11,8 +11,8 @@
       .state('auth', {
         abstract: true,
         resolve: {
-          userAuth: ['auth', function (auth) {
-            return auth.instance.$requireAuth();
+          userAuth: ['firebaseAuthService', function (firebaseAuthService) {
+            return firebaseAuthService.instance.$requireAuth();
           }]
         }
       })
@@ -20,7 +20,7 @@
         abstract: true,
       });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/start');
   }
 
 })();
