@@ -39,7 +39,7 @@
        */
     function generateRandomNumber() {
 
-      return __.random(100);
+      return _.random(100);
     }
 
   }
