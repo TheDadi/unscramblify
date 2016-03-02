@@ -14,6 +14,7 @@
 
     var service = {
       createUser: createUser,
+      createAnonymUser: createAnonymUser,
       setUser: setUser,
       getUser: getUser
     };
@@ -35,7 +36,17 @@
             return setUser(auth.uid, userdata);
           }
         );
+    }
 
+    function createAnonymUser(userdata){
+
+      return firebaseAuthService.instance
+        .$authAnonymously()
+        .then(
+          function (auth) {
+            return setUser(auth.uid, userdata);
+          }
+        );
     }
 
     /**
