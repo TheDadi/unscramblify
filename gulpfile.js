@@ -14,7 +14,7 @@ var reload = browserSync.reload;
 var paths = {
     styles: {
         app: ['src/app/styles/app.scss'],
-        watch: ['src/app/styles/**/*.scss'],
+        watch: ['src/app/**/*.scss'],
         dist: 'dist/styles'
     },
     javascript: {
