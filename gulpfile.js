@@ -98,7 +98,8 @@ gulp.task('templates', function () {
     return gulp.src(paths.templates.app)
         .pipe($.plumber())
         .pipe($.angularTemplatecache({
-            standalone: true
+          module: 'app',
+          root: 'app'
         }))
         .pipe(gulp.dest(paths.templates.dist));
 });
@@ -121,7 +122,7 @@ gulp.task('vendor', function () {
         .pipe($.filter('**/**.js'))
         .pipe($.sourcemaps.init())
         .pipe($.concat('lib.js'))
-        .pipe($.uglify())
+        //.pipe($.uglify())
         .pipe($.sourcemaps.write())
         .pipe(gulp.dest(paths.vendor.dist));
 });
