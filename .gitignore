@@ -1,0 +1,20 @@
+# Application
+dist/
+.tmp/
+
+# Bower
+bower_components/
+
+# NPM
+node_modules/
+npm-debug.log
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.settings/
+.project
+.classpath
+
