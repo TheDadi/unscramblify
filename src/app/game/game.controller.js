@@ -12,6 +12,7 @@
 
     vm.onTimeOver = onTimeOver;
     vm.getNextWord = getNextWord;
+    vm.showTime = true;
 
     vm.shuffledWordList = wordShuffleService.shuffleArray(words);
     vm.currentWord = vm.shuffledWordList[wordIndex];
@@ -20,6 +21,7 @@
 
     function onTimeOver() {
 
+      vm.showTime = false;
       scoreboardService
         .addUser(vm.user.$id, {
           avatar: vm.user.avatar,
