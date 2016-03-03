@@ -1,12 +1,30 @@
 @import "variables";
 @import "../start/start";
-@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../leaderboard/leaderboard";
+@import "../landing/landing";
+@import "../game/game";
+@import "../rules/rules";
+@import "../components/countdown/countdown";
 @import "../components/user/user";
+@import "../components/word/word";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
-html, body{
-  height:100%;
+html, body {
+  height: 100%;
+}
+
+.content-wrapper {
+  padding-top: 100px;
 }
 
 .highlight--grey {
   background-color: #eee;
 }
+
+.main__button {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  z-index: 10000;
+}
+
