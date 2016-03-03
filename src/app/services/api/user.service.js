@@ -10,7 +10,7 @@
    */
 
   /** @ngInject */
-  function userService($q, firebaseAuthService, firebase, $firebaseArray) {
+  function userService($q, firebaseAuthService, firebase, $firebaseObject) {
 
     var service = {
       createUser: createUser,
@@ -60,7 +60,7 @@
       var deferred = $q.defer();
 
       firebase
-        .reference('/users/' + uid)
+        .reference('/users').child(uid)
         .set(user, function (error) {
           if (error) {
             deferred.reject(error);
@@ -80,13 +80,8 @@
      */
     function getUser(uid) {
 
-      return $firebaseArray(firebase
-        .resource('/users'))
-        .$loaded(
-          function (users) {
-            return users.$getRecord(uid);
-          }
-        );
+      return $firebaseObject(firebase
+        .reference('/users').child(uid));
     }
 
   }
