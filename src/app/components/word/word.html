@@ -1,0 +1,17 @@
+<div class="bs-component">
+  <div class="word">
+    <div class="word__content">
+      <div class="word__content__scrambled">
+        <div class="word__content__scrambled__word" data-ng-bind="vm.shuffledWord"></div>
+      </div>
+      <div class="word__content__unscrambled">
+        <input id="guess"
+               type="text"
+               class="form-control word__content__unscrabled__input"
+               name="guess"
+               data-ng-model="vm.guess" data-ng-change="vm.onChange()" data-ng-keydown="vm.onKeyDown($event)">
+      </div>
+
+    </div>
+  </div>
+</div>
