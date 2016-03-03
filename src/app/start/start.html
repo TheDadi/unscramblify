@@ -1,0 +1,68 @@
+<div class="start">
+  <div class="start__content">
+    <div class="start__content__form-wrapper">
+      <div class="start__content__form-box bs-component">
+        <form class="form-horizontal start__content__form" name="userForm" novalidate
+              data-ng-submit="vm.login(vm.user)">
+          <fieldset>
+            <div class="start__content__form__header">Sign in</div>
+            <div class="form-group is-empty"
+                 data-ng-class="{ 'has-error': userForm.firstname.$dirty && userForm.firstname.$invalid }">
+              <label for="firstname" class="control-label control-label--start">First Name</label>
+              <div class="form-control-wrapper">
+                <input id="firstname"
+                       type="text"
+                       class="form-control"
+                       name="firstname"
+                       data-ng-model="vm.user.firstname"
+                       data-ng-model-options="{ updateOn: 'blur' }"
+                       required>
+                <div data-ng-messages="userForm.firstname.$error" class="help-block">
+                  <div data-ng-message="required">Please enter your first name.</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group is-empty"
+                 data-ng-class="{ 'has-error': userForm.lastname.$dirty && userForm.lastname.$invalid }">
+              <label for="lastname" class="control-label control-label--start">Last Name</label>
+              <div class="form-control-wrapper">
+                <input
+                  id="lastname"
+                  type="text"
+                  class="form-control"
+                  name="lastname"
+                  data-ng-model="vm.user.lastname"
+                  required>
+
+                <div data-ng-messages="userForm.lastname.$error" class="help-block">
+                  <div data-ng-message="required">Please enter your last name.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="start__content__form__header start__content__form__header--spaced">Choose an Avatar</div>
+            <div class="form-group">
+              <div class="form-control-wrapper form-control-wrapper--pushed">
+                <div class="avatar-wrapper" ng-repeat="avatarId in vm.avatars">
+                  <img ng-click="vm.setAvatar(avatarId)"  class="avatar" data-ng-class="{ 'is-selected': avatarId == vm.user.avatar }"
+                       data-ng-src="https://api.adorable.io/avatars/128/{{ avatarId }}.png"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-control-wrapper form-control-wrapper--pushed">
+                <button type="submit" ng-show="userForm.$valid"
+                        class="btn btn-raised btn-block btn-primary">Sign In
+                </button>
+              </div>
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
