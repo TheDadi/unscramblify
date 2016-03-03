@@ -25,7 +25,7 @@
 
       return {
         word: word.$value,
-        shuffledWordArray: _.shuffle(word.$value.toUpperCase().split(''))
+        shuffledLetterArray: _.shuffle(word.$value.toUpperCase().split(''))
       };
 
     }
