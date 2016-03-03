@@ -9,15 +9,16 @@
   function StartController($state, userService, generateRandomService) {
     var vm = this;
 
-    vm.user = {};
-
     vm.login = login;
 
     vm.setAvatar = setAvatar;
 
     vm.avatars = generateRandomService.generateRandomArray(12);
 
-    vm.user.avatar = vm.avatars[0];
+    vm.user = {
+      avatar: vm.avatars[0],
+      score: 0,
+    };
 
     function login(user) {
 
