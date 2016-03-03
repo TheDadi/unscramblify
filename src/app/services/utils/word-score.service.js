@@ -26,7 +26,9 @@
 
       var _numberOfDeletes = numberOfDeletes || 0;
 
-      return (calculateMaxScore(word) - _numberOfDeletes);
+      var score = calculateMaxScore(word) - _numberOfDeletes;
+
+      return score > 0 ? score : 0;
     }
 
     /**
