@@ -12,26 +12,26 @@
 .user__data{
   float:left;
   width: 100%;
-  font-size: 25px;
+  line-height: 25px;
+  font-size: 20px;
   color: white;
+}
+
+
+.user__data__avatar, .user__data__name, .user__data__score{
+  padding: 20.5px 15px;
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .user__data__score{
   float: right;
-  font-size: 25px;
-  color: white;
-  padding: 20.5px 15px;
-  height: 100px;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .user__data__avatar, .user__data__name  {
   float: left;
-  padding: 20.5px 15px;
-  height: 100px;
-  display: inline-block;
-  vertical-align: middle;
+
 }
 
 .user__data__avatar__img{
