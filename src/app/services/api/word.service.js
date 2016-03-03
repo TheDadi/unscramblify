@@ -3,14 +3,14 @@
 
   angular
     .module('app')
-    .service('userService', userService);
+    .service('wordService', wordService);
 
   /**
    * Service to access/modify words
    */
 
   /** @ngInject */
-  function userService(firebase, $firebaseArray) {
+  function wordService(firebase, $firebaseArray) {
 
     var service = {
       getWords: getWords,
@@ -26,12 +26,7 @@
     function getWords() {
 
       return $firebaseArray(firebase
-        .resource('/words'))
-        .$loaded(
-          function (users) {
-            return users.$getRecord(uid);
-          }
-        );
+        .reference('/words'));
     }
 
   }
