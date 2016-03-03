@@ -8,19 +8,21 @@
   <link href="styles/app.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic"
         rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <base href="/">
+  <link rel="stylesheet" type="text/css" href=" https://bootswatch.com/paper/bootstrap.min.css">
+
 </head>
 <body class="highlight--grey">
 <ui-view>
   <ui-view></ui-view>
 </ui-view>
-<footer class="footer">
-  <div class="footer__copyright">
-    <div class="container"><span>&copy; Dario Di Fazio</span></div>
-  </div>
-</footer>
-<script src="/js/libs/lib.js"></script>
-<script src="/js/app.js"></script>
-<script src="/js/templates.js"></script>
+<script src="js/libs/lib.js"></script>
+<script src="js/app.js"></script>
+<script src="js/templates.js"></script>
+<script src="js/templates.js"></script>
+<script>
+  $.material.init();
+</script>
 </body>
 </html>
