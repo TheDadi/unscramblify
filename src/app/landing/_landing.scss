@@ -1,0 +1,72 @@
+.landing {
+  @extend .container;
+}
+
+.landing__content-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.landing__content {
+  @include make-row();
+}
+
+.landing__content__item-wrapper {
+  @include make-md-column(4);
+}
+
+.landing__content__item {
+  @extend .panel;
+  @extend .panel-default;
+  border: none!important;
+
+}
+
+.landing__content__item__body {
+  @extend .panel-body;
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.landing__content__item__body--rules {
+  background-color: #ff8a80!important;
+}
+
+.landing__content__item__body--leaderboard {
+  background-color: #84ffff!important;
+}
+
+.landing__content__item__body--game {
+
+  background-color: #b9f6ca!important;
+}
+
+.landing__content__item__footer--leaderboard{
+  background-color: #03a9f4!important;
+  color: white!important;
+}
+
+.landing__content__item__footer--game{
+  background-color: #1de9b6!important;
+}
+
+.landing__content__item__footer--rules{
+  background-color: #ff5252!important;
+  color: white!important;
+}
+
+
+.landing__content__item__footer {
+  @extend .panel-footer;
+  border-top: none!important;
+  cursor: pointer;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  padding-right: 20px !important;
+
+}
+
+.landing__content__item__footer__icon{
+  float: right;
+}

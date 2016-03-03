@@ -1,13 +1,42 @@
-<div>
-  <user user="vm.user"></user>
+<div class="content-wrapper">
+  <div class="landing">
+    <user user="vm.user"></user>
+    <div class="landing__content-wrapper">
+      <div class="landing__content">
+        <div class="landing__content__item-wrapper">
+          <div class="landing__content__item">
+            <div class="landing__content__item__body landing__content__item__body--rules"><img
+              data-ng-src="images/icon_rules.png"/></div>
 
-  <div> Some initial content</div>
+            <div class="landing__content__item__footer landing__content__item__footer--rules" data-ui-sref="rules">Rules<i
+              class="landing__content__item__footer__icon glyphicon glyphicon-play"></i></div>
 
+          </div>
+        </div>
+        <div class="landing__content__item-wrapper">
+          <div class="landing__content__item">
+            <div class="landing__content__item__body landing__content__item__body--game"><img
+              data-ng-src="images/icon_game.png"/></div>
 
-  <button type="submit" data-ng-click="vm.startGame()"
-          class="btn btn-primary">Let's play
-  </button>
+            <div class="landing__content__item__footer landing__content__item__footer--game" data-ui-sref="game">Start Game<i
+              class="landing__content__item__footer__icon glyphicon glyphicon-play"></i></div>
 
+          </div>
+        </div>
+        <div class="landing__content__item-wrapper">
+          <div class="landing__content__item">
+            <div class="landing__content__item__body landing__content__item__body--leaderboard"><img
+              data-ng-src="images/icon_leaderboard.png"/>
+            </div>
 
+            <div class="landing__content__item__footer landing__content__item__footer--leaderboard" data-ui-sref="leaderboard">Leaderboard<i
+              class="landing__content__item__footer__icon glyphicon glyphicon-play"></i></div>
 
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </div>
