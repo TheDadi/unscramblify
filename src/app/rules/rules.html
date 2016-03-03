@@ -1,0 +1,42 @@
+<div class="content-wrapper">
+  <a data-ui-sref="landing" class="btn btn-default main__button">Back</a>
+  <div class="container">
+    <div class="row">
+      <div class="rules">
+        <div class="bs-component">
+          <div class="panel panel-primary">
+            <div class="panel-heading panel-heading--rules">
+              <h3 class="panel-title">Rules</h3>
+            </div>
+            <div class="panel-body panel-body--rules">
+
+              <h4>GOAL</h4>
+              <p>The goal is to implement a small word puzzle game that presents the user with a mangled word and asks
+                her to enter the correct, unmangled word. If the word to unmangle is pizza the application may present
+                the word as zpaiz and the user must then enter P I Z Z A in this order for the solution to be
+                accepted.</p>
+
+              <h4>SCORING</h4>
+
+              <h5>The scoring of the game is as follows:</h5>
+              <ul>
+                <li>A full score is given only if the word was entered correctly on first guess without ever deleting
+                  any character
+                </li>
+                <li>For each character that was deleted whilst entering the word -1 is subtracted from the score</li>
+                <li>The maximally obtainable score for a word is max_score = floor(1.95^(n/3))where n is the number of
+                  characters in the word, ^ denotes the exponential function and floor is the round-down function which
+                  truncates a float to an integer
+                </li>
+                <li>The score for a word can never be negative, as such max_score >= score >= 0 always holds for score
+                  being the actual score the user receives for solving this word A game runs for 40 seconds, during
+                  which the user can solve as many words as she can manage.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

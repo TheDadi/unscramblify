@@ -1,0 +1,11 @@
+.rules {
+  @include make-md-column(8);
+  @include make-md-column-push(2);
+}
+
+.panel-heading--rules{
+  padding-top: 25px!important;
+  padding-bottom: 25px!important;
+  background-color: #00bad2!important;
+}
+
