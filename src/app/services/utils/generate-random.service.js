@@ -30,6 +30,8 @@
 
         if (randomArray.indexOf(random) == -1) {
           randomArray.push(random);
+        } else {
+          i--;
         }
       }
 
