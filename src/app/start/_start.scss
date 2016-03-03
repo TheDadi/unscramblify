@@ -1,52 +1,59 @@
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-.start{
+
+.start {
   @extend .container;
 }
-.control-label--start{
+
+.control-label--start {
   @include make-md-column(2);
 }
 
-.start__content{
- @include make-row();
+.start__content {
+  @include make-row();
 }
-.start__content__form-box{
+
+.start__content__form-box {
   @extend .well;
-  background-color: white!important;
+  background-color: white !important;
 
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26)!important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
 }
 
-.start__content__form__header{
+.start__content__form__header {
   font-size: 1.5em;
   color: $color-blue;
   font-weight: lighter;
 }
 
-.start__content__form__header--spaced{
+.start__content__form__header--spaced {
   margin: 10px 0;
 }
-.start__content__form-wrapper{
+
+.start__content__form-wrapper {
   @include make-md-column(6);
   @include make-md-column-push(3);
   margin-top: 20px;
 }
 
-.form-control-wrapper{
+.form-control-wrapper {
   @include make-md-column(10);
 }
-.form-control-wrapper--pushed{
+
+.form-control-wrapper--pushed {
   @include make-md-column-push(2);
 }
-.avatar-wrapper{
+
+.avatar-wrapper {
   @include make-xs-column(2, 5px);
 }
-.avatar{
+
+.avatar {
   @include form-control-focus(white);
   border-radius: 50%;
   height: 100%;
   width: 100%;
   margin-top: 5px;
-  &.is-selected{
+  &.is-selected {
     border: $color-blue solid;
   }
 }

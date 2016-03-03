@@ -33,7 +33,7 @@
         );
     }
 
-    function setAvatar(avatarId){
+    function setAvatar(avatarId) {
 
       vm.user.avatar = avatarId;
     }

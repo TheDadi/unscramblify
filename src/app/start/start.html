@@ -44,7 +44,8 @@
             <div class="form-group">
               <div class="form-control-wrapper form-control-wrapper--pushed">
                 <div class="avatar-wrapper" ng-repeat="avatarId in vm.avatars">
-                  <img ng-click="vm.setAvatar(avatarId)"  class="avatar" data-ng-class="{ 'is-selected': avatarId == vm.user.avatar }"
+                  <img ng-click="vm.setAvatar(avatarId)" class="avatar"
+                       data-ng-class="{ 'is-selected': avatarId == vm.user.avatar }"
                        data-ng-src="https://api.adorable.io/avatars/128/{{ avatarId }}.png"/>
                 </div>
               </div>
