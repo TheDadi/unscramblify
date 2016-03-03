@@ -1,0 +1,23 @@
+.game__content-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.game__content__progress{
+  @extend .container;
+}
+.game__content__progress__input-wrapper{
+  @include make-row();
+
+}
+
+.game__content__progress__input{
+  @include make-md-column(8);
+  @include make-md-column-push(2);
+  @extend .panel;
+  @extend .panel-default;
+}
+
+.game__content__progress__input__word{
+  @extend .panel-body;
+}

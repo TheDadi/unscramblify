@@ -1,9 +1,20 @@
-<div>
+<div class="content-wrapper">
+  <div class="game">
+    <user user="vm.user"></user>
+    <div class="game__content-wrapper">
+      <div class="game__content">
+        <div class="game__content__progress">
+          <countdown duration="vm.gameDuration" finish="vm.onTimeOver()"></countdown>
+          <div class="game__content__progress__input-wrapper">
+            <div class="game__content__progress__input">
+              <word class="game__content__progress__input__word" shuffled-word="vm.currentWord.shuffledWord"
+                    word-to-guess="vm.currentWord.word"
+                    word-solved="vm.getNextWord(score)"></word>
+            </div>
+          </div>
+        </div>
 
-  <user user="vm.user"></user>
-
-  <countdown duration="vm.gameDuration" finish="vm.onTimeOver()"></countdown>
-
-  <div> Some game content</div>
-
+      </div>
+    </div>
+  </div>
 </div>
