@@ -1,0 +1,58 @@
+.leaderboard {
+  @include make-md-column(6);
+  @include make-md-column-push(3);
+}
+
+.panel-heading--leaderboard{
+  padding-top: 25px!important;
+  padding-bottom: 25px!important;
+}
+.panel-body--leaderboard{
+  padding: 0!important;
+}
+.leaderboard__user {
+  font-size: 16px;
+  color: black;
+  line-height: 70px;
+  background: white;
+  margin: 1px 0;
+  border-radius: 1px;
+  box-shadow: 0 1px 0px rgba(0,0,0,0.08);
+  counter-increment: leaderboard;
+  cursor: pointer;
+
+  &:before {
+    content: '#' counter(leaderboard);
+    margin-right: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    color: rgba(0,0,0,0.5);
+  }
+}
+
+.leaderboard__user__name,
+.leaderboard__user__avatar,
+.leaderboard__user__score{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.leaderboard__user__score{
+  float:right;
+  margin-right: 10px;
+}
+
+.leaderboard__user__name{
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+
+.leaderboard__user__avatar {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+

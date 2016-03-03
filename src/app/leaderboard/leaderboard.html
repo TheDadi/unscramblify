@@ -1,0 +1,23 @@
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="leaderboard">
+        <div class="bs-component">
+          <div class="panel panel-primary">
+            <div class="panel-heading panel-heading--leaderboard">
+              <h3 class="panel-title">Leaderboard</h3>
+            </div>
+            <div class="panel-body panel-body--leaderboard">
+              <div class="leaderboard__user" data-ng-repeat="user in vm.scoreboard">
+                <img class="leaderboard__user__avatar"
+                     data-ng-src="https://api.adorable.io/avatars/128/{{ user.avatar }}.png"/>
+                <div class="leaderboard__user__name" data-ng-bind="user.firstname + ' ' + user.lastname"></div>
+                <div class="leaderboard__user__score" data-ng-bind="user.score + ' Pt'"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
