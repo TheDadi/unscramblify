@@ -1,0 +1,14 @@
+.countdown{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.countdown__content__value{
+  float: left;
+  margin-right: 10px;
+  color: $color-blue;
+}
+.countdown__content__text{
+  float: left;
+}

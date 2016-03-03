@@ -6,7 +6,6 @@
     .component('countdown', {
       bindings: {
         duration: '=?',
-        start: '&?',
         finish: '&?'
       },
       controller: CountdownController,
