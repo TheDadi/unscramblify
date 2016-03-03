@@ -1,14 +1,14 @@
 <div class="bs-component">
-  <nav class="navbar navbar-inverse navbar-fixed-bottom">
-    <div class="container-fluid">
-      <div class="test2">
-        <div class="test"><img style="height: 100%;" data-ng-src="https://api.adorable.io/avatars/128/{{ vm.user.avatar }}.png"/></div>
-        <div class="test" data-ng-bind="vm.user.firstname + ' ' + vm.user.lastname"></div>
-      </div>
-      <div class="nav navbar-nav navbar-right">
-        <div class="user__score" data-ng-bind="vm.user.score"></div>
+  <div class="container-fluid">
+    <div class="user">
+      <div class="user__data">
+        <div class="user__data__avatar">
+          <img class="user__data__avatar__img"
+               data-ng-src="https://api.adorable.io/avatars/128/{{ vm.user.avatar }}.png"/>
+        </div>
+        <div class="user__data__name" data-ng-bind="vm.user.firstname + ' ' + vm.user.lastname"></div>
+        <div class="user__data__score" data-ng-bind="vm.user.score"></div>
       </div>
     </div>
-
-  </nav>
+  </div>
 </div>

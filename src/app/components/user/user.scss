@@ -1,51 +1,40 @@
-.test{
-  height: 100px;
-  float: left;
-  padding: 20.5px 15px;
-  font-size: 17px;
-  line-height: 23px;
-}
-
-
-.test2{
-  float:left;
-}
-
 .user {
+  border: none;
   background-color: $color-blue;
   position: fixed;
-  height: 100px;
   right: 0;
   left: 0;
   z-index: 1030;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26)
 }
 
-.user--fixed-top {
-  top: 0;
-}
-
-.user--fixed-bottom {
-  bottom: 0;
-}
-
-.user__data {
-  @include make-md-column(8);
-  margin-top: 15px;
-}
-
-.user__data__avatar {
-  border-radius: 50%;
-  overflow: hidden;
-  height: 64px;
-  width: 64px;
-}
-
-.user__data__name{
-
+.user__data{
   float:left;
+  width: 100%;
+  font-size: 25px;
+  color: white;
 }
-.user__score {
-  @include make-md-column(4);
+
+.user__data__score{
   float: right;
+  font-size: 25px;
+  color: white;
+  padding: 20.5px 15px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: middle;
 }
+
+.user__data__avatar, .user__data__name  {
+  float: left;
+  padding: 20.5px 15px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.user__data__avatar__img{
+  height: 100%;
+  border-radius: 50%;
+}
+
