@@ -1,0 +1,12 @@
+@import "variables";
+@import "../start/start";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+html, body{
+  height:100%;
+}
+
+.highlight--grey {
+  background-color: #eee;
+}
